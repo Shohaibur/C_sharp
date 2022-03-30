@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Entertainment
+    {
+        public string network = "Netflix";
+        public void movie()
+        {
+            Console.WriteLine("Batman");
+        }
+    }
+
+    class Series : Entertainment // derived class (child)
+    {
+        public string seriesName = "Dark";
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a mySeries object
+            Series mySeries = new Series();
+
+            // Call the movie()  method (From the Entertainment class) on the mySeries object
+            mySeries.movie();
+
+            // Display the value of the network field (from the Entertainment class) and the value of the seriesName from the Series class
+            Console.WriteLine(mySeries.network + " " + mySeries.seriesName);
+        }
+    }
+}
+
